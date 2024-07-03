@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import Link from "next/link";
 import Image from "next/image";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Poppins({ subsets: ["latin"] ,weight:["100","200","300","400","500","600","700","800","900"]});
 
 export const metadata: Metadata = {
   title: "logistic app",
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body  >
+      <body className={inter.className} >
         <Navbar/>
         <div className=" z-10  right-0 bottom-14  w-14 h-14 rounded-full bg-black fixed mr-2 ">
          <Link href="https://wa.me/+918291047365">
